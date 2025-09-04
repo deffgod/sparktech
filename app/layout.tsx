@@ -1,0 +1,34 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'SparkTech Trading - Premium Trading Solutions in UAE',
+  description: 'Leading trading company in Dubai specializing in mobile phones, electronics, vehicles, and premium goods. Trusted partner for international trade.',
+  keywords: 'trading, Dubai, UAE, mobile phones, electronics, vehicles, export, import, SparkTech',
+  authors: [{ name: 'SparkTech Trading FZCO' }],
+  openGraph: {
+    title: 'SparkTech Trading - Premium Trading Solutions',
+    description: 'Leading trading company in Dubai specializing in electronics, vehicles, and premium goods.',
+    url: 'https://sparktech-trading.com',
+    siteName: 'SparkTech Trading',
+    locale: 'en_US',
+    type: 'website',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  )
+}

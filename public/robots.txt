@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sparktech-trading.com/sitemap.xml
+
+# Disallow certain paths (if any)
+# Disallow: /admin
+# Disallow: /private
