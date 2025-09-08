@@ -181,7 +181,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
 ## 📞 Support
 
 For any questions or support, please contact:
-- Email: info@sparktech-trading.com
+- Email: spartech77@gmail.com
 - Phone: +971 XX XXX XXXX
 
 ## 🤝 Contributing

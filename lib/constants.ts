@@ -5,7 +5,7 @@ export const COMPANY_INFO = {
   description: 'Leading trading company in Dubai specializing in electronics, vehicles, and premium goods. Trusted partner for international trade.',
   
   contact: {
-    email: 'info@sparktech-trading.com',
+    email: 'spartech77@gmail.com',
     phone: '+971 XX XXX XXXX',
     address: {
       street: 'Dubai Silicon Oasis, Techno Hub 2',

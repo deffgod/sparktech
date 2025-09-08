@@ -70,7 +70,7 @@ export default function NotFound() {
             Need help? Contact our team:
           </p>
           <div className="space-y-2 text-sm text-gray-600">
-            <div>📧 info@sparktech-trading.com</div>
+            <div>📧 spartech77@gmail.com</div>
             <div>📞 +971 XX XXX XXXX</div>
             <div>📍 Dubai Silicon Oasis, UAE</div>
           </div>

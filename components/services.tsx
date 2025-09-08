@@ -10,9 +10,13 @@ import {
   Car, 
   Laptop,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Star,
+  Sparkles as SparklesIcon
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Sparkles } from '@/components/ui/sparkles'
+import { GlowingStars } from '@/components/ui/glowing-stars'
 
 const services = [
   {
@@ -77,14 +81,17 @@ export function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
-            <Zap className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-sky-100 to-blue-100 text-sky-800 text-sm font-medium mb-6 shadow-lg">
+            <SparklesIcon className="w-4 h-4 mr-2 text-sky-500 animate-pulse" />
             Our Trading Services
+            <Star className="w-3 h-3 ml-2 text-sky-500" />
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Premium Trading
-            <span className="block text-blue-600">Solutions</span>
+            <span className="block sky-blue-gradient bg-clip-text text-white rounded-lg p-4 animate-gradient">
+              Solutions
+            </span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -103,18 +110,21 @@ export function Services() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative bg-white rounded-3xl shadow-lg border border-gray-100 p-8 hover:shadow-2xl transition-all duration-300 h-full">
+              <div className="relative bg-white/95 backdrop-blur-xl border border-sky-200/50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 h-full group-hover:scale-105 transform">
                 {/* Gradient background on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 sky-blue-gradient rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                {/* Sparkles effect */}
+                <Sparkles count={5} color="#0ea5e9" />
                 
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} mb-6`}>
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl sky-blue-gradient mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-sky-600 transition-colors">
                     {service.title}
                   </h3>
                   
@@ -126,14 +136,14 @@ export function Services() {
                   <div className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-sky-500 flex-shrink-0" />
                         <span className="text-gray-700 text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* CTA */}
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors cursor-pointer">
+                  <div className="flex items-center text-sky-600 font-semibold group-hover:text-sky-700 transition-colors cursor-pointer">
                     <span className="text-sm">Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -149,30 +159,36 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white"
+          className="relative sky-blue-gradient rounded-3xl p-12 text-center text-white overflow-hidden"
         >
-          <h3 className="text-3xl lg:text-4xl font-bold mb-4">
-            Ready to Start Trading?
-          </h3>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Get in touch with our expert team to discuss your trading requirements 
-            and discover how we can help grow your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={handleGetQuote}
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 text-lg"
-            >
-              Get Quote
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg"
-            >
-              View Catalog
-            </Button>
+          {/* Background effects */}
+          <GlowingStars count={15} size="md" />
+          <Sparkles count={20} color="#fbbf24" />
+          
+          <div className="relative z-10">
+            <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+              Ready to Start Trading?
+            </h3>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Get in touch with our expert team to discuss your trading requirements 
+              and discover how we can help grow your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={handleGetQuote}
+                size="lg"
+                className="bg-white text-sky-600 hover:bg-sky-50 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              >
+                Get Quote
+              </Button>
+              <Button 
+                variant="outline"
+                size="lg"
+                className="border-white/30 text-sky-600 hover:bg-white/100 backdrop-blur-md px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                View Catalog
+              </Button>
+            </div>
           </div>
         </motion.div>
 

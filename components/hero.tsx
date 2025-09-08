@@ -4,7 +4,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Globe, Zap, Shield, TrendingUp } from 'lucide-react'
+import { ArrowRight, Globe, Zap, Shield, TrendingUp, Star, Sparkles as SparklesIcon, Building2, Users, Award } from 'lucide-react'
+import { AnimatedBackground } from '@/components/ui/animated-background'
+import { Sparkles } from '@/components/ui/sparkles'
+import { GlowingStars } from '@/components/ui/glowing-stars'
+import { Component as RaycastBackground } from '@/components/ui/raycast-animated-blue-background'
 
 export function Hero() {
   function handleGetStarted() {
@@ -22,137 +26,105 @@ export function Hero() {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
-        <div className="absolute inset-0 bg-black/20"></div>
-      </div>
-      
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-40 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+        <div className="absolute top-40 right-20 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-40 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center">
+          {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-6 py-3 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200/50 text-gray-700 text-sm font-medium mb-8 shadow-lg"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6"
-            >
-              <Zap className="w-4 h-4 mr-2 text-yellow-300" />
-              Leading Trading Solutions in UAE
-            </motion.div>
-            
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
-            >
-              Premium
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Trading
-              </span>
-              Solutions
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-blue-100 mt-6 max-w-lg"
-            >
-              Your trusted partner for international trade in electronics, vehicles, and premium goods. 
-              Based in Dubai Silicon Oasis, serving global markets.
-            </motion.p>
+            <SparklesIcon className="w-4 h-4 mr-2 text-blue-500" />
+            Leading Trading Solutions in UAE
+            <Star className="w-3 h-3 ml-2 text-blue-500" />
+          </motion.div>
+          
+          {/* Main heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight mb-8"
+          >
+            Premium
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg transform -rotate-1"></div>
+              <span className="relative block text-white px-4 py-2 transform rotate-1">Trading</span>
+            </div>
+            Solutions
+          </motion.h1>
+          
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12"
+          >
+            Your trusted partner for international trade in electronics, vehicles, and premium goods. 
+            Based in Dubai Silicon Oasis, serving global markets.
+          </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 mt-8"
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          >
+            <Button
+              onClick={handleGetStarted}
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg group shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
-              <Button
-                onClick={handleGetStarted}
-                size="lg"
-                className="bg-white text-blue-900 hover:bg-blue-50 font-semibold px-8 py-4 text-lg group"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                onClick={handleLearnMore}
-                variant="outline"
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg"
-              >
-                Learn More
-              </Button>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-white/20"
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button
+              onClick={handleLearnMore}
+              variant="outline"
+              size="lg"
+              className="border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">5+</div>
-                <div className="text-blue-200 text-sm">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">50+</div>
-                <div className="text-blue-200 text-sm">Global Partners</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">1000+</div>
-                <div className="text-blue-200 text-sm">Successful Trades</div>
-              </div>
-            </motion.div>
+              Learn More
+            </Button>
           </motion.div>
 
+          {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-600 rounded-3xl blur-3xl opacity-30"></div>
-              <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8">
-                <div className="grid grid-cols-2 gap-6">
-                  {[
-                    { icon: Globe, title: 'Global Reach', desc: 'Worldwide network' },
-                    { icon: Shield, title: 'Trusted', desc: 'Secure transactions' },
-                    { icon: TrendingUp, title: 'Growth', desc: 'Expanding markets' },
-                    { icon: Zap, title: 'Fast', desc: 'Quick delivery' }
-                  ].map((item, index) => (
-                    <motion.div
-                      key={item.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                      className="text-center p-4 rounded-2xl bg-white/5 backdrop-blur-sm"
-                    >
-                      <item.icon className="w-8 h-8 text-blue-300 mx-auto mb-2" />
-                      <div className="text-white font-semibold">{item.title}</div>
-                      <div className="text-blue-200 text-sm">{item.desc}</div>
-                    </motion.div>
-                  ))}
+            {[
+              { number: "3+", label: "Years Experience", icon: Award },
+              { number: "50+", label: "Global Partners", icon: Users },
+              { number: "1000+", label: "Successful Trades", icon: Building2 }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-4 group-hover:bg-blue-200 transition-all duration-300">
+                  <stat.icon className="w-8 h-8 text-blue-600" />
                 </div>
-              </div>
-            </div>
+                <div className="text-4xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{stat.number}</div>
+                <div className="text-gray-600 text-sm group-hover:text-blue-500 transition-colors">{stat.label}</div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
@@ -187,14 +159,29 @@ export function Hero() {
             transform: translate(0px, 0px) scale(1);
           }
         }
+        @keyframes gradient {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
         .animate-blob {
           animation: blob 7s infinite;
+        }
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradient 3s ease infinite;
         }
         .animation-delay-2000 {
           animation-delay: 2s;
         }
         .animation-delay-4000 {
           animation-delay: 4s;
+        }
+        .animation-delay-6000 {
+          animation-delay: 6s;
         }
       `}</style>
     </section>

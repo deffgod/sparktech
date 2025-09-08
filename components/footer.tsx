@@ -63,13 +63,10 @@ export function Footer() {
                 <MapPin className="w-5 h-5 text-blue-400" />
                 <span className="text-sm">Dubai Silicon Oasis, Techno Hub 2, UAE</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5 text-green-400" />
-                <span className="text-sm">+971 XX XXX XXXX</span>
-              </div>
+             
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-sm">info@sparktech-trading.com</span>
+                <span className="text-sm">spartech77@gmail.com</span>
               </div>
             </div>
           </motion.div>
@@ -141,25 +138,7 @@ export function Footer() {
               © {currentYear} SparkTech Trading FZCO. All rights reserved.
             </div>
             
-            <div className="flex items-center space-x-6">
-              <div className="text-gray-400 text-sm">Follow us:</div>
-              <div className="flex space-x-4">
-                {[
-                  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                  { icon: Twitter, href: '#', label: 'Twitter' },
-                  { icon: Facebook, href: '#', label: 'Facebook' }
-                ].map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-200 group"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                  </a>
-                ))}
-              </div>
-            </div>
+            
           </div>
         </motion.div>
       </div>
@@ -185,14 +164,7 @@ export function Footer() {
               <div className="text-gray-500 text-xs mb-1">Company</div>
               <div className="text-gray-300 text-sm font-medium">SparkTech Trading FZCO</div>
             </div>
-            <div>
-              <div className="text-gray-500 text-xs mb-1">Bank</div>
-              <div className="text-gray-300 text-sm font-medium">First Abu Dhabi Bank</div>
-            </div>
-            <div>
-              <div className="text-gray-500 text-xs mb-1">SWIFT Code</div>
-              <div className="text-gray-300 text-sm font-medium">NBADAEAA</div>
-            </div>
+            
             <div>
               <div className="text-gray-500 text-xs mb-1">Location</div>
               <div className="text-gray-300 text-sm font-medium">Dubai, UAE</div>

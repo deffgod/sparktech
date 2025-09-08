@@ -3,14 +3,10 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { 
-  Phone, 
   Mail, 
   MapPin, 
   Clock,
-  Send,
-  Building2,
-  CreditCard,
-  Globe
+  Send
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -57,14 +53,14 @@ export function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
-            <Phone className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-sky-100 text-sky-800 text-sm font-medium mb-6">
+            <Mail className="w-4 h-4 mr-2" />
             Contact Us
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Let's Start
-            <span className="block text-blue-600">Trading Together</span>
+            <span className="block sky-blue-text">Trading Together</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -81,7 +77,7 @@ export function Contact() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-3xl shadow-2xl p-8">
+            <div className="bg-white/95 backdrop-blur-xl border border-sky-200/50 rounded-3xl shadow-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -97,7 +93,7 @@ export function Contact() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
                       placeholder="Your full name"
                     />
                   </div>
@@ -113,7 +109,7 @@ export function Contact() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -130,7 +126,7 @@ export function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
                       placeholder="Your company"
                     />
                   </div>
@@ -145,7 +141,7 @@ export function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
                       placeholder="+971 XX XXX XXXX"
                     />
                   </div>
@@ -160,7 +156,7 @@ export function Contact() {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="">Select a service</option>
                     <option value="mobile-phones">Mobile Phones & Accessories</option>
@@ -192,7 +188,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 group"
+                  className="w-full sky-blue-bg hover:bg-sky-600 text-white font-semibold py-4 group"
                 >
                   Send Message
                   <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -210,13 +206,13 @@ export function Contact() {
             className="space-y-8"
           >
             {/* Contact Details */}
-            <div className="bg-white rounded-3xl shadow-xl p-8">
+            <div className="corporate-card rounded-3xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-sky-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
@@ -228,23 +224,14 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+971 XX XXX XXXX</p>
-                  </div>
-                </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-sky-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">info@sparktech-trading.com</p>
+                    <p className="text-gray-600">spartech77@gmail.com</p>
                   </div>
                 </div>
 
@@ -264,72 +251,7 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Company Banking Details */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Banking Information</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Building2 className="w-5 h-5 text-blue-200" />
-                  <div>
-                    <span className="text-blue-100 text-sm">Bank: </span>
-                    <span className="font-semibold">First Abu Dhabi Bank</span>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-blue-200" />
-                  <div>
-                    <span className="text-blue-100 text-sm">Branch: </span>
-                    <span className="font-semibold">Abu Dhabi Khalifa Street, FAB One Tower, 14th Floor</span>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-3">
-                  <CreditCard className="w-5 h-5 text-blue-200" />
-                  <div>
-                    <span className="text-blue-100 text-sm">SWIFT: </span>
-                    <span className="font-semibold">NBADAEAA</span>
-                  </div>
-                </div>
 
-                <div className="pt-4 border-t border-blue-300/20">
-                  <div className="text-blue-100 text-sm mb-2">Account Numbers:</div>
-                  <div className="space-y-1 text-sm">
-                    <div><strong>AED:</strong> AE970351191326036938001</div>
-                    <div><strong>USD:</strong> AE700351191326036938002</div>
-                    <div><strong>EUR:</strong> AE430351191326036938003</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Leadership */}
-            <div className="bg-white rounded-3xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Leadership Team</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">OZ</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Oleg Zinko</h4>
-                    <p className="text-gray-600 text-sm">Shareholder and Director</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">JM</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Jacob Mitbreit</h4>
-                    <p className="text-gray-600 text-sm">Director</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

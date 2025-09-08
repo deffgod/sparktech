@@ -129,7 +129,7 @@ Create `.env.local` and update:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
-NEXT_PUBLIC_CONTACT_EMAIL=info@sparktech-trading.com
+NEXT_PUBLIC_CONTACT_EMAIL=spartech77@gmail.com
 NEXT_PUBLIC_CONTACT_PHONE="+971 XX XXX XXXX"
 ```
 
@@ -216,4 +216,4 @@ For deployment support:
 
 **SparkTech Trading FZCO**
 Dubai Silicon Oasis, UAE
-info@sparktech-trading.com
+spartech77@gmail.com
