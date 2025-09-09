@@ -63,16 +63,41 @@ export function Header() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center space-x-3 group">
                 <div className="relative">
-                  <div className="w-12 h-12 sky-blue-gradient rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                    <SparklesIcon className="w-6 h-6 text-white animate-pulse" />
-                  </div>
-                  <div className="absolute inset-0 sky-blue-gradient rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  {isScrolled ? (
+                    // Light background - use black logo
+                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                      <img 
+                        src="/black-circle-1.svg" 
+                        alt="SparkTech Logo" 
+                        className="w-8 h-8"
+                      />
+                    </div>
+                  ) : (
+                    // Dark background - use white logo
+                    <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                      <img 
+                        src="/white-circle-1.svg" 
+                        alt="SparkTech Logo" 
+                        className="w-12 h-12"
+                      />
+                    </div>
+                  )}
                 </div>
-                <span className={`font-bold text-xl transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-900' : 'text-white'
-                }`}>
-                  SparkTech
-                </span>
+                <div className="flex items-center">
+                  {isScrolled ? (
+                    <img 
+                      src="/black-text-1.svg" 
+                      alt="SparkTech" 
+                      className="h-12 w-auto"
+                    />
+                  ) : (
+                    <img 
+                      src="/white-text-1.svg" 
+                      alt="SparkTech" 
+                      className="h-12 w-auto"
+                    />
+                  )}
+                </div>
               </Link>
             </div>
 

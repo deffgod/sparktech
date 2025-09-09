@@ -44,12 +44,20 @@ export function Footer() {
             className="lg:col-span-2"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                <img 
+                  src="/white-circle-1.svg" 
+                  alt="SparkTech Logo" 
+                  className="w-8 h-8"
+                />
               </div>
-              <div>
-                <h3 className="text-2xl font-bold">SparkTech Trading</h3>
-                <p className="text-gray-400 text-sm">FZCO</p>
+              <div className="flex flex-col">
+                <img 
+                  src="/white-text-1.svg" 
+                  alt="SparkTech" 
+                  className="h-6 w-auto mb-1"
+                />
+                <p className="text-gray-400 text-sm">Trading FZCO</p>
               </div>
             </div>
             

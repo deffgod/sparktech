@@ -21,8 +21,17 @@ export function About() {
               <div className="relative bg-white/95 backdrop-blur-xl border border-sky-200/50 rounded-3xl p-8 shadow-2xl">
                 <div className="aspect-video bg-gradient-to-br from-sky-100 to-blue-100 rounded-2xl flex items-center justify-center mb-6">
                   <div className="text-center">
-                    <div className="text-6xl font-bold sky-blue-gradient bg-clip-text text-white rounded-lg p-4 mb-4">
-                      SparkTech
+                    <div className="flex items-center justify-center space-x-4 mb-4">
+                      <img 
+                        src="/black-circle-1.svg" 
+                        alt="SparkTech Logo" 
+                        className="w-26 h-26"
+                      />
+                      <img 
+                        src="/black-text-1.svg" 
+                        alt="SparkTech" 
+                        className="h-18 w-auto"
+                      />
                     </div>
                     <div className="text-gray-600 text-lg">Trading Excellence</div>
                   </div>
