@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sparktech.com'),
+  metadataBase: new URL('https://sparktech77.com'),
   title: 'SparkTech Trading - Premium Trading Solutions in UAE',
   description: 'Leading trading company in Dubai specializing in mobile phones, electronics, vehicles, and premium goods. Trusted partner for international trade.',
   keywords: 'trading, Dubai, UAE, mobile phones, electronics, vehicles, export, import, SparkTech',
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SparkTech Trading - Premium Trading Solutions',
     description: 'Leading trading company in Dubai specializing in electronics, vehicles, and premium goods.',
-    url: 'https://sparktech.com',
+    url: 'https://sparktech77.com',
     siteName: 'SparkTech Trading',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://sparktech.com/black-circle-1.svg',
+        url: 'https://sparktech77.com/black-circle-1.svg',
         width: 1200,
         height: 630,
         alt: 'SparkTech Trading Logo',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SparkTech Trading - Premium Trading Solutions',
     description: 'Leading trading company in Dubai specializing in electronics, vehicles, and premium goods.',
-    images: ['https://sparktech.com/black-circle-1.svg'],
+    images: ['https://sparktech77.com/black-circle-1.svg'],
   },
 }
 
